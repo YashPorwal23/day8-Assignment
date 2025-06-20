@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of positive numbers</title>
+</head>
+
+<body>
+    <script>
+        function sumPositiveNumbers(arr) {
+            let sum = 0;
+            for (let num of arr) {
+                if (num > 0) {
+                    sum += num;
+                }
+            }
+            return sum;
+        }
+        let numbers = [3, -2, 7, 0, -5, 8];
+        let sum = sumPositiveNumbers(numbers);
+        console.log("Sum of positive numbers:", sum); 
+    </script>
+</body>
+
+</html>
