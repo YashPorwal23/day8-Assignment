@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>INPUT VALIDATION</title>
+</head>
+
+<script>
+    let number;
+    do {
+        number = parseInt(prompt("Enter a number between 1 and 10:"));
+    } while (isNaN(number) || number < 1 || number > 10);
+
+    console.log(`You entered a valid number: ${number}`);
+</script>
+</body>
+
+</html>
