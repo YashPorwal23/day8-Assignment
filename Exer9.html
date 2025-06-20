@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library record</title>
+</head>
+
+<body>
+    <script>
+        let library = [
+            { title: "1984", author: "George Orwell", year: 1949, available: true },
+            { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960, available: true },
+            { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925, available: false }
+        ];
+
+
+        function displayAvailableBooks() {
+            console.log("Available Books:");
+            library.forEach(book => {
+                if (book.available) {
+                    console.log(`${book.title} by ${book.author} (${book.year})`);
+                }
+            });
+        }
+
+
+        function borrowBook(title) {
+            let book = library.find(b => b.title === title);
+            if (book && book.available) {
+                book.available = false;
+                console.log(`You have borrowed "${book.title}".`);
+            } else {
+                console.log(`"${title}" is not available.`);
+            }
+        }
+        function addBook(title, author, year) {
+            library.push({ title, author, year, available: true });
+            console.log(`Added "${title}" to the library.`);
+        }
+
+
+        displayAvailableBooks();
+        borrowBook("1984");
+        addBook("Brave New World", "Aldous Huxley", 1932);
+    </script>
+</body>
+</html>
